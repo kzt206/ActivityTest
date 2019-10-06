@@ -24,18 +24,16 @@ public class Main2Activity extends AppCompatActivity {
         nextView = findViewById(R.id.nextView);
 
         Intent intent = getIntent();
-        numberStr = intent.getStringExtra("Number");
-        nextView.setText(numberStr);
-//        Integer number = intent.getIntExtra("number",1);
-//        nextView.setText(String.valueOf(number));
+//        numberStr = intent.getStringExtra("Number");
+//        nextView.setText(numberStr);
+          int data = intent.getIntExtra("Number",0);
+        nextView.setText(String.valueOf(data));
 
         showButton = findViewById(R.id.button3);
         showButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                int number2 = Integer.parseInt(numberStr) ;
-                int number3 = number2 - 1;
-                nextView.setText(String.valueOf(number3));
+               finish();
             }
         });
 
